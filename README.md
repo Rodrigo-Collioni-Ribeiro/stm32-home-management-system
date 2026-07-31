@@ -8,6 +8,9 @@ A real-time home automation controller built on the STM32F439 microcontroller, d
 
 This system simulates a home automation controller that monitors room temperature via a potentiometer, controls light/fan/heater/cooler outputs, accepts commands over serial, and reports status automatically. The design centers on a **non-blocking software scheduler** — a single hardware timer coordinating debounce, lockout, and transmission timing for every subsystem, avoiding both interrupt complexity and multiple hardware timers.
 
+![RMIT STM32F439 development board](images/development_board.jpg)
+*The RMIT development board used for this project — STM32F439 module with GPIO breakout, ADC inputs, CAN bus, USB-Serial, Ethernet, and onboard switches/LEDs used to build and test the Home Management System.*
+
 ## Key Features
 
 - **Software-scheduled multitasking** — TIM2 generates a 1ms tick; a single scheduler decrements independent software counters for debounce, lockout, and transmission timing across all peripherals, keeping the main loop fully non-blocking.
