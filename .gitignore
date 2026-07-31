@@ -1,0 +1,17 @@
+# Keil build outputs
+RAM/
+Flash/*.build_log.htm
+Flash/*.axf
+Flash/*.map
+Flash/*.lnp
+*.o
+*.d
+*.i
+*.lst
+
+# Personal IDE state
+*.uvguix.*
+
+# Debugger logs
+JLinkLog.txt
+JLinkSettings.ini
